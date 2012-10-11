@@ -3,10 +3,22 @@ import robocode.*;
 import java.awt.Color;
 
 /**
- * Nemesis - a robot by (your name here)
+ * Nemesis
+ * 
+ * tasks:
+ *  - use getBearing when hitting a wall to not hit the wall again?
+ *  - find a good algorithm for movement. is circle strafing around oppenent possible?
+ *  - make a method to find position that current robot is in.
+ *  - mimic ememy robot color
+ *  - mimic actions?
  */
 public class Nemesis extends AdvanceRobot
 {
+	// implement these after we find location and rotation.
+	int posX;
+	int posY;
+	int rot;
+	
 	/**
 	 * run: Nemesis's default behavior
 	 */
@@ -27,7 +39,18 @@ public class Nemesis extends AdvanceRobot
 	 * onScannedRobot: What to do when you see another robot
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
+		setColors(Color.RED,Color.RED,Color.RED);
 		fire(1);
+		
+	}
+	
+	/**
+	 * Method to find position
+	 * 
+	 * first find two walls, measure distance, than from this point on, take note of location(?)
+	 */
+	public void positionFind(){
+		return;
 	}
 
 	/**
